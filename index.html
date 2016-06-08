@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
-	<title>Shower Presentation Engine</title>
+	<title>Первое знакомство с Knockout.js</title>
 	<meta charset="utf-8">
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -9,18 +9,21 @@
 </head>
 <body class="shower list">
 	<header class="caption">
-		<h1>Shower Presentation Engine</h1>
-		<p>Yours Truly, Famous Inc.</p>
+		<h1>Первое знакомство с Knockout.js</h1>
+		<p>Всё, что нужно, чтобы принять решение и начать использовать в реальной жизни</p>
 	</header>
 	<section class="slide" id="cover">
-		<h2>Shower Presentation Engine</h2>
-		<p>Brought to you by <a href="http://pepelsbey.net">Vadim Makeev</a></p>
+		<h2>Старый добрый нокаут</h2>
+		<p>докладчик Черносов Денис</p>
 		<img src="pictures/cover.jpg" alt="" class="cover">
 		<!--
 			To apply styles to the certain slides
 			set slide ID to get needed elements
 			-->
 		<style>
+			#cover {
+				background-color: #e75c01;
+			}
 			#cover h2 {
 				margin:30px 0 0;
 				color:#FFF;
@@ -28,7 +31,7 @@
 				font-size:70px;
 				}
 			#cover p {
-				margin:10px 0 0;
+				margin:0;
 				text-align:center;
 				color:#FFF;
 				font-style:italic;
@@ -37,143 +40,167 @@
 				#cover p a {
 					color:#FFF;
 					}
+			#cover img {
+				top: 72%;
+			}
 		</style>
 	</section>
+
 	<section class="slide">
-		<h2>Shower key features</h2>
-		<ol>
-			<li>Built on HTML, CSS and vanilla JavaScript</li>
-			<li>Works in all modern browsers</li>
-			<li>Themes are separated from engine</li>
-			<li>Modular and extensible</li>
-			<li>Fully keyboard accessible</li>
-			<li>Printable to PDF</li>
-		</ol>
-		<p class="note">Shower ['ʃəuə] noun. A person or thing that shows.</p>
+		<h2>Введение, история появления</h2>
+		<ul>
+			<li>Первый релиз: 5 июля 2010 г.</li>
+			<li>Автор: Steve Sanderson (Microsoft). Лицензия MIT</li>
+			<li>Поддержка браузеров: IE 6+, Firefox 3.5+, Chrome, Opera, Safari (desktop/mobile)</li>
+			<li>Статистика использования на июнь 2016 года: <b>на 251 сайте из 10k наиболее популярных (2.5%)</b>, в целом < 0.1% <sup>*</sup></li>
+		</ul>
+		<p class="note"><sup>*</sup>Источник: http://trends.builtwith.com/javascript/KnockoutJS.</p>
 	</section>
+
 	<section class="slide">
-		<h2>Plain text on your slides</h2>
-		<p>Lorem ipsum dolor sit amet, consectetur <a href="#4">adipisicing</a> elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, <em>quis nostrud</em> exercitation ullamco laboris <strong>nisi ut aliquip</strong> ex ea commodo consequat. Duis aute irure <i>dolor</i> in reprehenderit in voluptate velit esse cillum <b>dolore</b> eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in <code>&lt;culpa&gt;</code> qui officia deserunt mollit anim id est laborum.</p>
+		<h2>Документация, сообщество, плагины</h2>
+
+		<ul>
+			<li>Живые примеры</li>
+			<li>Интерактивные руководства</li>
+			<li>Документация</li>
+			<li>Блоги: <a href="http://www.knockmeout.net/">www.knockmeout.net</a></li>
+			<li>API, форум</li>
+		</ul>
 	</section>
+
 	<section class="slide">
-		<h2>Two columns if you like</h2>
-		<p class="double">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.</p>
+		<h2>Ключевые концепции</h2>
+		<ul>
+			<li>Объекты, доступные для наблюдения (Observables) и отслеживание зависимостей</li>
+			<li>Декларативное связывание (Declarative bindings)</li>
+			<li>Шаблонизация (Templating)</li>
+		</ul>
 	</section>
+
 	<section class="slide">
-		<h2>All kind of lists</h2>
-		<ol>
-			<li>Simple lists are marked with bullets</li>
-			<li>Ordered lists begin with a number</li>
-			<li>You can even nest lists one inside another
-				<ul>
-					<li>Or mix their types</li>
-					<li>But do not go too far</li>
-					<li>Otherwise audience will be bored</li>
-				</ul>
-			</li>
-			<li>Look, seven rows exactly!</li>
-		</ol>
+		<h2>Архитектура Model-View-ViewModel (MVVM)</h2>
+		<ul>
+			<li>Model - это ваши бизнес-данные</li>
+			<li>ViewModel - данные и логика представления. Переменные и функции для генерации шаблонов и обработки событий UI</li>
+			<li>View - это интерактивное UI-представление состояния ViewModel. Оно посылает команды во ViewModel и обновляется, когда обновляется ViewModel</li>
+		</ul>
 	</section>
+
 	<section class="slide">
-		<h2>Serious citations</h2>
-		<figure>
-			<blockquote>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.</p>
-			</blockquote>
-			<figcaption>Marcus Tullius Cicero</figcaption>
-		</figure>
-	</section>
-	<section class="slide">
-		<h2>Code samples</h2>
+		<h2>Шаблон Наблюдатель (Observer)</h2>
 		<pre>
-			<code>&lt;!DOCTYPE html&gt;</code>
-			<code class="mark">&lt;html lang="en"&gt;</code>
-			<code><mark>&lt;head&gt;</mark> <span class="comment">&lt;!--Comment--&gt;</span></code>
-			<code>    &lt;title&gt;Shower&lt;/title&gt;</code>
-			<code>    &lt;meta charset="<mark class="important">UTF-8</mark>"&gt;</code>
-			<code>    &lt;link rel="stylesheet" href="screen.css"&gt;</code>
-			<code><mark>&lt;/head&gt;</mark></code>
+			<code>var self = this;</code>
+			<code>self.name = <mark>ko.observable</mark>('Anonymous');</code>
+			<code>self.list = <mark>ko.observableArray</mark>(['a', 'b', 'c']);</code>
+			<code>var nameLogger = self.name.<mark>subscribe</mark>(function(newValue) {
+	console.log(newValue) ;
+});</code>
+			<code>if (!debugMode) { nameLogger.<mark>dispose()</mark>; }</code>
+		</pre>
+		<p class="note">События и <b>beforeChange</b> и <b>change</b> не всегда отработают в паре</p>
+	</section>
+
+	<section class="slide">
+		<h2>Шаблон Наблюдатель (Observer)</h2>
+		<pre>
+			<code>self.total = <mark>ko.computed</mark>(function() {
+	return this.list().length;
+}, self);</code>
+			<code>self.fullName = <mark>ko.pureComputed</mark>(function() {
+	return this.firstName() + " " + this.lastName();
+}, self);</code>
 		</pre>
 	</section>
+
 	<section class="slide">
-		<h2>Even tables</h2>
-		<table>
-		<tr>
-			<th scope="col">Locavore</th>
-			<th>Umami</th>
-			<th>Helvetica</th>
-			<th>Vegan</th>
-		</tr>
-		<tr>
-			<th scope="row">Fingerstache</th>
-			<td>Kale</td>
-			<td>Chips</td>
-			<td>Keytar</td>
-		</tr>
-		<tr>
-			<th scope="row">Sriracha</th>
-			<td>Gluten-free</td>
-			<td>Ennui</td>
-			<td>Keffiyeh</td>
-		</tr>
-		<tr>
-			<th scope="row">Thundercats</th>
-			<td>Jean</td>
-			<td>Shorts</td>
-			<td>Biodiesel</td>
-		</tr>
-		<tr>
-			<th scope="row">Terry</th>
-			<td>Richardson</td>
-			<td>Swag</td>
-			<td>Blog</td>
-		</tr>
-		</table>
-		<p>It’s good to have information organized.</p>
+		<h2>Расширения наблюдателей (ko.extenders)</h2>
+		<pre><code>ko.extenders.<mark>logChange</mark> = function(target, <mark class="important">option</mark>) {
+    target.subscribe(function(newValue) {
+		console.log(<mark class="important">option</mark> + ": " + newValue);
+	}); return target;
+};</code></pre>
+		<hr />
+		<pre><code>this.firstName = ko.observable("Bob")
+	.extend({<mark>logChange</mark>: <mark class="important">"first name"</mark>});</code></pre>
 	</section>
-	<section class="slide" id="picture">
-		<h2>Pictures</h2>
-		<img src="pictures/picture.jpg" alt="" class="cover">
-		<style>
-			#picture h2 {
-				color:#FFF;
-				}
-		</style>
+
+	<section class="slide">
+		<h2>Обвязки (Bindings)</h2>
+		<p class="note">ViewModel</p>
+		<pre><code>var myViewModel = { <mark class="important">personName</mark>: ko.observable('Bob') };
+...
+ko.applyBindings(myViewModel);</code></pre>
+		<hr />
+		<p class="note">View</p>
+			<pre><code>The name is &lt;span <mark>data-bind</mark>=&quot;<mark>text</mark>: <mark class="important">personName</mark>&quot;&gt;&lt;/span&gt;</code></pre>
+	</section>
+
+	<section class="slide">
+		<h2>Обвязки (Bindings)</h2>
+		<ul>
+			<li>visible, text, html, css, style, attr</li>
+			<li>foreach, if, ifnot, with, template, component</li>
+			<li>click, event, submit, enable, disable, value, textInput, hasFocus, checked, options, selectedOptions, uniqueName</li>
+			<li>...</li>
+		</ul>
+	</section>
+
+	<section class="slide">
+		<h2>Собственные обвязки (ko.bindingHandlers)</h2>
+		<pre><code>ko.bindingHandlers.<mark>popover</mark> = {
+init: function (element) {
+  $(element).<mark class="important">popover</mark>({ placement: "right",
+	trigger: 'hover'});
+}};</code></pre>
+		<pre><code>&lt;span data-bind=&quot;<mark>popover</mark>: true&quot;
+			data-content=&quot;Some text&quot;&gt;&lt;/span&gt;</code></pre>
+	</section>
+
+	<section class="slide">
+		<h2>Внедрение с нуля. Управление зависимостями</h2>
+		<ul>
+			<li>Bower</li>
+			<li>AMD + RequireJS</li>
+			<li>NPM</li>
+		</ul>
+	</section>
+
+	<section class="slide">
+		<h2>Миграция на KO в унаследованном проекте</h2>
+		<ul>
+			<li>Легко берёт на себя управление сколь угодно малыми частями UI</li>
+			<li>Поддерживает несколько View-ViewModel на одной странице, привязанные к разным DOM-элементам</li>
+			<li>Замечательно дружит с JQuery и его компонентами. </li>
+			<li>Не навязывает ничего, кроме базовых концепций</li>
+			<li>Легко дружится с другими библиотеками. Например: sammy.js (роутинг на стороне клиента)</li>
+		</ul>
+	</section>
+
+	<section class="slide">
+		<h2>Use cases, применяемость</h2>
+		<ul>
+			<li>Лейблы и инпуты</li>
+			<li>Управляющие конструкции: условный и циклический вывод, привязка контекста</li>
+			<li>Шаблоны и компоненты</li>
+			<li>Валидация, фильтрация, форматирование</li>
+			<li>Сериализация/десериализация: плагин mapping</li>
+			<li>AJAX</li>
+			<li>Ненавязчивые обработчики событий: почти как в JQuery</li>
+		</ul>
+	</section>
+
+	<section class="slide">
+		<h2>Расширяемость и интеграция с другими инструментами</h2>
+	</section>
+
+	<section class="slide">
+		<h2>Плюсы/минусы, нравится/не нравится, типичные ошибки</h2>
 	</section>
 	<section class="slide">
-		<h2 class="shout shrink">You can even shout this way</h2>
+		<h2 class="shout shrink">Вопросы?</h2>
 	</section>
-	<section class="slide">
-		<h2>Inner navigation</h2>
-		<ol>
-			<li>Lets you reveal list items one by one</li>
-			<li class="next">To keep some key points</li>
-			<li class="next">In secret from audience</li>
-			<li class="next">But it will work only once</li>
-			<li class="next">Nobody wants to see the same joke twice</li>
-		</ol>
-	</section>
-	<section class="slide grid">
-		<h2>All nicely aligned to grid</h2>
-	</section>
-	<section class="slide" id="see-more">
-		<h2 class="shout">
-			<img src="pictures/logo.svg" alt="Shower logo">
-			<a href="https://github.com/shower/shower">See more on GitHub</a>
-		</h2>
-		<style>
-			#see-more h2 {
-				font-size:100px
-				}
-			#see-more img {
-				width:0.72em;
-				height:0.72em;
-				}
-		</style>
-	</section>
-	<p class="badge">
-		<a href="https://github.com/shower/shower">Fork me on GitHub</a>
-	</p>
+
 	<!--
 		To hide progress bar from entire presentation
 		just remove “progress” element.
