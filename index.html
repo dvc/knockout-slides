@@ -158,6 +158,17 @@ init: function (element) {
 	</section>
 
 	<section class="slide">
+		<h2>Назад в будущее: почти как в JQuery, но гораздо лучше (Unobtrusive event handlers)</h2>
+		<ul>
+			<li>ko.dataFor(element)</li>
+			<li>ko.contextFor(element)</li>
+		</ul>
+		<pre><code>$(".container").on("click", ".remove", function() {
+    viewModel.items.remove(<mark>ko.dataFor(this)</mark>);
+});</code></pre>
+	</section>
+
+	<section class="slide">
 		<h2 class="shout">Шаблоны</h2>
 	</section>
 
