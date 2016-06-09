@@ -130,7 +130,7 @@
 		<p class="note">ViewModel</p>
 		<pre><code>var myViewModel = { <mark class="important">personName</mark>: ko.observable('Bob') };
 ...
-ko.applyBindings(myViewModel);</code></pre>
+ko.applyBindings(myViewModel); <span class="comment">//Горошочек вари!</span></code></pre>
 		<hr />
 		<p class="note">View</p>
 			<pre><code>The name is &lt;span <mark>data-bind</mark>=&quot;<mark>text</mark>: <mark class="important">personName</mark>&quot;&gt;&lt;/span&gt;</code></pre>
@@ -158,6 +158,59 @@ init: function (element) {
 	</section>
 
 	<section class="slide">
+		<h2 class="shout">Шаблоны</h2>
+	</section>
+
+	<section class="slide">
+		<h2 class="shout">Компоненты</h2>
+	</section>
+
+	<section class="slide">
+		<h2>Горшочек не вари - отключаем автоматическое отслеживание зависимостей</h2>
+		<ul>
+			<li>observable.peek() vs observable()</li>
+			<li>ko.ignoreDependencies( callback, callbackTarget, callbackArgs );</li>
+		</ul>
+	</section>
+
+	<section class="slide">
+		<h2>Горшочек не гони - отложенные уведомления и прочие оптимизации</h2>
+		<ul>
+			<li>ko.options.deferUpdates = true</li>
+			<li>ko.observableArray().extend({ deferred: true })</li>
+			<li>ko.computed({ deferEvaluation: true })</li>
+			<li>ko.computed({ pure: true })</li>
+			<li>someObservableOrComputed.extend({ rateLimit: 500 })</li>
+		</ul>
+	</section>
+
+	<section class="slide">
+		<h2>Горшочек не тормози - обязательные уведомления</h2>
+		<ul>
+			<li>someComputed.extend({ notify: 'always' })</li>
+		</ul>
+	</section>
+
+	<section class="slide">
+		<h2>Продвинутые методики</h2>
+		<ul>
+			<li>Препроцессинг обвязок (ko.bindingHandlers.&lt;name&gt;.preprocess)
+				<ul>
+					<li>Значения по умолчанию</li>
+					<li>Парсеры выражений в обвязках</li>
+				</ul>
+			</li>
+			<li>
+				Препроцессинг узлов DOM (ko.bindingProvider.instance.preprocessNode)
+				<ul>
+					<li>Дополнительные манипуляции с DOM-элементами</li>
+					<li>Поддержка собственного синтаксиса виртуальных элементов разметки</li>
+				</ul>
+			</li>
+		</ul>
+	</section>
+
+	<section class="slide">
 		<h2>Внедрение с нуля. Управление зависимостями</h2>
 		<ul>
 			<li>Bower</li>
@@ -181,8 +234,6 @@ init: function (element) {
 		<h2>Use cases, применяемость</h2>
 		<ul>
 			<li>Лейблы и инпуты</li>
-			<li>Управляющие конструкции: условный и циклический вывод, привязка контекста</li>
-			<li>Шаблоны и компоненты</li>
 			<li>Валидация, фильтрация, форматирование</li>
 			<li>Сериализация/десериализация: плагин mapping</li>
 			<li>AJAX</li>
@@ -191,7 +242,7 @@ init: function (element) {
 	</section>
 
 	<section class="slide">
-		<h2>Расширяемость и интеграция с другими инструментами</h2>
+		<h2 class="shout">Расширяемость и интеграция с другими инструментами</h2>
 	</section>
 
 	<section class="slide">
