@@ -169,11 +169,26 @@ init: function (element) {
 	</section>
 
 	<section class="slide">
-		<h2 class="shout">Шаблоны</h2>
+		<h2 class="shout">Шаблоны и компоненты</h2>
 	</section>
 
 	<section class="slide">
-		<h2 class="shout">Компоненты</h2>
+		<h2>Утилиты (ko.utils)</h2>
+		<ul class="double">
+			<li>unwrapObservable = unwrap</li>
+			<li>peekObservable</li>
+			<li>parseJson</li>
+			<li>stringifyJson</li>
+			<li>objectForEach</li>
+			<li>arrayForEach</li>
+			<li>arrayMap</li>
+			<li>arrayGetDistinctValues</li>
+			<li>other array*</li>
+			<li>extend</li>
+			<li>range</li>
+			<li><mark>postJson</mark></li>
+			<li>...</li>
+		</ul>
 	</section>
 
 	<section class="slide">
@@ -196,9 +211,34 @@ init: function (element) {
 	</section>
 
 	<section class="slide">
-		<h2>Горшочек не тормози - обязательные уведомления</h2>
+		<h2>Горшочек не хитри - обязательные уведомления</h2>
 		<ul>
 			<li>someComputed.extend({ notify: 'always' })</li>
+		</ul>
+	</section>
+
+	<section class="slide">
+		<h2>Миграция на KO в унаследованном проекте</h2>
+		<ul>
+			<li>Легко берёт на себя управление сколь угодно малыми частями UI</li>
+			<li>Поддерживает несколько View-ViewModel на одной странице, привязанные к разным DOM-элементам</li>
+			<li>Замечательно дружит с JQuery и его компонентами. </li>
+			<li>Не навязывает ничего, кроме базовых концепций</li>
+			<li>Легко дружится с другими библиотеками. Например: sammy.js (роутинг на стороне клиента)</li>
+		</ul>
+	</section>
+
+	<section class="slide">
+		<h2>Use cases</h2>
+		<ul>
+			<li>Таблицы и списки</li>
+			<li>Формы</li>
+			<li>Валидация, фильтрация, форматирование</li>
+			<li>Локализация</li>
+			<li>Сериализация/десериализация: плагин mapping</li>
+			<li>AJAX</li>
+			<li>Ненавязчивые обработчики событий: почти как в JQuery</li>
+			<li>Тесты</li>
 		</ul>
 	</section>
 
@@ -224,41 +264,12 @@ init: function (element) {
 	<section class="slide">
 		<h2>Внедрение с нуля. Управление зависимостями</h2>
 		<ul>
+			<li>Grunt</li>
 			<li>Bower</li>
 			<li>AMD + RequireJS</li>
-			<li>NPM</li>
 		</ul>
 	</section>
 
-	<section class="slide">
-		<h2>Миграция на KO в унаследованном проекте</h2>
-		<ul>
-			<li>Легко берёт на себя управление сколь угодно малыми частями UI</li>
-			<li>Поддерживает несколько View-ViewModel на одной странице, привязанные к разным DOM-элементам</li>
-			<li>Замечательно дружит с JQuery и его компонентами. </li>
-			<li>Не навязывает ничего, кроме базовых концепций</li>
-			<li>Легко дружится с другими библиотеками. Например: sammy.js (роутинг на стороне клиента)</li>
-		</ul>
-	</section>
-
-	<section class="slide">
-		<h2>Use cases, применяемость</h2>
-		<ul>
-			<li>Лейблы и инпуты</li>
-			<li>Валидация, фильтрация, форматирование</li>
-			<li>Сериализация/десериализация: плагин mapping</li>
-			<li>AJAX</li>
-			<li>Ненавязчивые обработчики событий: почти как в JQuery</li>
-		</ul>
-	</section>
-
-	<section class="slide">
-		<h2 class="shout">Расширяемость и интеграция с другими инструментами</h2>
-	</section>
-
-	<section class="slide">
-		<h2>Плюсы/минусы, нравится/не нравится, типичные ошибки</h2>
-	</section>
 	<section class="slide">
 		<h2 class="shout shrink">Вопросы?</h2>
 	</section>
