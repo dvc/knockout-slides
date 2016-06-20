@@ -299,7 +299,7 @@ init: function (element) {
 			event.preventDefault();
 
 			keyboardEvent = document.createEvent('KeyboardEvent');
-			keyboardEvent.initKeyEvent('keydown', true, true, null, false, false, false, false, keyCode, 0);
+			keyboardEvent.initKeyboardEvent('keydown', true, true, null, false, false, false, false, keyCode, 0);
 			document.dispatchEvent(keyboardEvent);
 		});
 	</script>
