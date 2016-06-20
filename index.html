@@ -280,6 +280,29 @@ init: function (element) {
 		-->
 	<div class="progress"></div>
 	<script src="node_modules/shower-core/shower.min.js"></script>
+	<script>
+		document.addEventListener('mousedown', function(event) {
+			var keyboardEvent, keyCode = 0;
+
+			switch (event.button) {
+				case 0:
+					keyCode = 39;
+					break;
+
+				case 1:
+					keyCode = 37;
+					break;
+			}
+
+			if (!keyCode) { return; }
+
+			event.preventDefault();
+
+			keyboardEvent = document.createEvent('KeyboardEvent');
+			keyboardEvent.initKeyEvent('keydown', true, true, null, false, false, false, false, keyCode, 0);
+			document.dispatchEvent(keyboardEvent);
+		});
+	</script>
 	<!-- Copyright © 2015 Yours Truly, Famous Inc. -->
 	<!-- Photos by John Carey, fiftyfootshadows.net -->
 </body>
